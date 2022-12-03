@@ -1,4 +1,5 @@
 from typing import List
+
 from utils import format_solution, puzzle_input
 
 
@@ -32,7 +33,8 @@ def predict(entity2: str, output: str) -> str:
         return entity2
     for entity1 in actions[entity2]:
         if actions[entity2][entity1] == action_mapping[output]:
-            return entity1
+            break
+    return entity1
 
 
 def func(d: List[str]) -> int:
